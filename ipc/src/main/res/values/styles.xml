@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light">
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>-->
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/base_activity_animation</item>
+
+    </style>
+
+    <style name="base_activity_animation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/base_slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/base_slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskOpenEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskOpenExitAnimation">@anim/base_slide_left_out</item>
+        <item name="android:taskCloseEnterAnimation">@anim/base_slide_left_in</item>
+        <item name="android:taskCloseExitAnimation">@anim/base_slide_right_out</item>
+        <item name="android:taskToFrontEnterAnimation">@anim/base_slide_right_in</item>
+        <item name="android:taskToFrontExitAnimation">@anim/base_slide_left_out</item>
+        <item name="android:taskToBackEnterAnimation">@anim/base_slide_left_in</item>
+        <item name="android:taskToBackExitAnimation">@anim/base_slide_right_out</item>
+    </style>
+
+</resources>

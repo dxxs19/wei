@@ -1,0 +1,50 @@
+// 声明是Android程序
+apply plugin: 'com.android.application'
+apply plugin:'android-apt'
+apply plugin: 'com.neenbedankt.android-apt'
+def AAVersion='3.2'
+
+android {
+    compileSdkVersion 23            // 编译SDK的版本
+    buildToolsVersion "23.0.3"      // build tools 的版本
+
+    defaultConfig {
+        applicationId "com.wei.ipc" // 应用包名
+        minSdkVersion 7
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false  // 是否进行混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // 混淆文件的位置
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])  // 编译libs目录下的所有jar包
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    apt "com.squareup.dagger:dagger-compiler:1.2.2"
+    compile 'javax.inject:javax.inject:1'
+    compile 'javax.annotation:javax.annotation-api:1.2'
+    provided 'com.squareup.dagger:dagger-compiler:1.2.2'
+}
+apt{
+    arguments{
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        resourcePackageName "com.wei.ipc"
+    }
+
+}
+//task clean(type: Exec) {
+//    ext.lockhunter = 'E:\\BaiduYunDownload\\adt-bundle-windows-x86_64-20140702\\lockhuntersetup_3-1-1.exe"'
+//    def buildDir = file(new File("build"))
+//    commandLine 'cmd', "$lockhunter", '/delete', '/silent', buildDir
+//}

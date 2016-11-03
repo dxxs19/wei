@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleView">
+        <attr name="circle_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ClockView">
+        <attr name="clock_width" format="dimension"/>
+        <attr name="clock_height" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProcess">
+        <attr name="circle_string" format="string"/>
+        <attr name="circle_dimension" format="dimension"/>
+        <attr name="circle_process_color" format="color"/>
+        <attr name="circle_drawable" format="color|reference"/>
+        <attr name="circle_space" format="dimension"/>
+    </declare-styleable>
+</resources>

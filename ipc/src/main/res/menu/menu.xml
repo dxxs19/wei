@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/serialize_menu"
+          android:title="Serialize序列化"/>
+
+    <item android:id="@+id/parcelable_menu"
+          android:title="Parcelable序列化"/>
+
+    <item android:id="@+id/task_menu"
+          android:title="task测试"/>
+
+
+</menu>
